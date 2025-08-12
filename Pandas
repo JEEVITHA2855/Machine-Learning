@@ -66,41 +66,32 @@ pd.concat([df1, df2])
 
 
 10. Applying Functions
+
 .apply(func) → Custom functions to Series/DataFrame
-
-
 .map(func) → Element-wise for Series
-
-
 .applymap(func) → Element-wise for DataFrame
 
 
 11. Date & Time Handling
+
 pd.to_datetime()
-
-
 .dt.year, .dt.month, .dt.day
 
 
 12. Index Operations
+
 .set_index(), .reset_index()
-
-
 .reindex()
 
 
 13. Window Functions
+
 .rolling(window=3).mean()
-
-
 .expanding().sum()
 
 
 14. Visualization (with Pandas)
+
 .plot(kind='line')
-
-
 .hist()
-
-
 .plot.scatter(x='col1', y='col2')
