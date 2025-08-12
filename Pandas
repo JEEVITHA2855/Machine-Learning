@@ -1,0 +1,106 @@
+1. Pandas Data Structures
+
+Series → 1D labeled array (like a column)
+DataFrame → 2D labeled table (rows + columns)
+Index → Labels for rows (can be numbers or strings)
+
+2. Importing & Exporting Data
+
+pd.read_csv(), pd.read_excel(), pd.read_json()
+.to_csv(), .to_excel(), .to_json()
+
+
+3. Selection & Indexing
+
+Single column → df['col']
+Multiple columns → df[['col1', 'col2']]
+Row by position → df.iloc[0]
+Row by label → df.loc[0] or df.loc['index_name']
+Boolean indexing → df[df['col'] > 10]
+
+
+
+4. Data Cleaning
+
+.isnull(), .notnull()
+.dropna(), .fillna(value)
+.astype() → Change datatype
+.replace()
+.duplicated(), .drop_duplicates()
+
+
+
+5. Descriptive Stats
+
+.head(), .tail(), .shape, .info()
+.describe()
+.value_counts()
+.unique(), .nunique()
+
+
+
+6. Sorting
+
+.sort_values(by='col', ascending=False)
+.sort_index()
+
+
+7. Filtering & Conditional Selection
+
+df[df['col'] > 10]
+Multiple conditions → df[(df['col1'] > 10) & (df['col2'] < 5)]
+
+8. Grouping & Aggregations
+
+.groupby('col').mean()
+.agg({'col1': 'mean', 'col2': 'sum'})
+.pivot_table()
+
+
+9. Merging, Joining, Concatenation
+
+pd.merge(df1, df2, on='key')
+pd.concat([df1, df2])
+.join()
+
+
+
+10. Applying Functions
+.apply(func) → Custom functions to Series/DataFrame
+
+
+.map(func) → Element-wise for Series
+
+
+.applymap(func) → Element-wise for DataFrame
+
+
+11. Date & Time Handling
+pd.to_datetime()
+
+
+.dt.year, .dt.month, .dt.day
+
+
+12. Index Operations
+.set_index(), .reset_index()
+
+
+.reindex()
+
+
+13. Window Functions
+.rolling(window=3).mean()
+
+
+.expanding().sum()
+
+
+14. Visualization (with Pandas)
+.plot(kind='line')
+
+
+.hist()
+
+
+.plot.scatter(x='col1', y='col2')
