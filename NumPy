@@ -1,0 +1,79 @@
+1. Introduction
+NumPy = Numerical Python.
+
+
+Used for fast mathematical operations on arrays.
+
+
+Arrays are homogeneous (same data type).
+2. Creating Arrays
+From Lists:
+np.array([1, 2, 3])
+Predefined:
+np.zeros((3,4)), np.ones((2,3)), np.eye(3)
+Range:
+np.arange(0,10,2), np.linspace(0,1,5)
+
+3. Array Attributes
+
+arr.ndim   # Number of dimensions
+arr.shape  # Shape (rows, cols)
+arr.size   # Total elements
+arr.dtype  # Data type
+
+4. Indexing & Slicing
+arr[0]       # First element
+arr[1:4]     # Slice from index 1 to 3
+mat[:,1]     # All rows, column 1
+mat[1:,:2]   # Rows 1+, columns up to 2
+
+5. Reshaping & Flattening
+arr.reshape((2,3))
+arr.flatten()   # Copy as 1D
+arr.ravel()     # View as 1D
+
+6. Data Types
+np.array([1,2], dtype=np.float32)
+arr.astype(np.int32)  # Convert type
+
+7. Math Operations
+a + b
+a - b
+a * b
+a / b
+np.sqrt(a)
+np.exp(a)
+np.log(a)
+
+8. Aggregations
+arr.sum()
+arr.mean()
+arr.min()
+arr.max()
+arr.std()
+
+9. Boolean Indexing
+arr[arr > 20]
+arr[arr % 2 == 0]
+
+10. Random
+
+np.random.rand(3,2)       # Uniform
+np.random.randn(3,2)      # Normal dist
+np.random.randint(0,10,(2,3))
+
+11. Linear Algebra
+
+np.dot(a,b)
+np.linalg.inv(a)
+np.linalg.det(a)
+np.linalg.eig(a)
+
+12. Tips
+Use vectorized operations instead of loops.
+
+
+Understand copy() vs view() (modifying one may affect the other).
+
+
+Use broadcasting for flexible shapes.
