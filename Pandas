@@ -19,7 +19,6 @@ Row by label → df.loc[0] or df.loc['index_name']
 Boolean indexing → df[df['col'] > 10]
 
 
-
 4. Data Cleaning
 
 .isnull(), .notnull()
