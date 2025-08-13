@@ -9,7 +9,6 @@ Index → Labels for rows (can be numbers or strings)
 pd.read_csv(), pd.read_excel(), pd.read_json()
 .to_csv(), .to_excel(), .to_json()
 
-
 3. Selection & Indexing
 
 Single column → df['col']
