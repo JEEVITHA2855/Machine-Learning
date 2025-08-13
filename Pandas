@@ -64,7 +64,6 @@ pd.concat([df1, df2])
 .join()
 
 
-
 10. Applying Functions
 
 .apply(func) → Custom functions to Series/DataFrame
