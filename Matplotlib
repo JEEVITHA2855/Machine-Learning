@@ -1,0 +1,133 @@
+Matplotlib 
+1️) What is Matplotlib?
+
+Python’s basic plotting library.
+Helps turn numbers into pictures (graphs, charts).
+Think of it as Excel charts but with Python control.
+Seaborn, Pandas .plot() → all built on top of Matplotlib.
+
+
+
+2️) Importing
+
+import matplotlib.pyplot as plt
+pyplot is the submodule used for plotting. Most people use plt as alias.
+
+3️) Basic Workflow
+
+Every plot follows this flow:
+Prepare data
+Call plt.plot() (or other chart functions)
+Customize (labels, title, colors)
+Show → plt.show()
+
+
+4️) Types of Plots
+
+🔹 Line Plot
+x = [1,2,3,4,5]
+y = [2,4,6,8,10]
+plt.plot(x, y, color="red", linestyle="--", marker="o")
+plt.title("Line Plot")
+plt.xlabel("X Axis")
+plt.ylabel("Y Axis")
+plt.show()
+
+🔹 Bar Chart
+categories = ["A", "B", "C"]
+values = [10, 20, 15]
+plt.bar(categories, values, color="purple")
+plt.title("Bar Chart")
+plt.show()
+
+🔹 Histogram
+import numpy as np
+data = np.random.randn(1000)  # 1000 random numbers
+plt.hist(data, bins=30, color="skyblue", edgecolor="black")
+plt.title("Histogram")
+plt.show()
+
+🔹 Scatter Plot
+x = np.random.rand(50)
+y = np.random.rand(50)
+plt.scatter(x, y, color="green")
+plt.title("Scatter Plot")
+plt.show()
+
+🔹 Box Plot (Whisker Plot)
+data = np.random.randn(100)
+plt.boxplot(data)
+plt.title("Box Plot")
+plt.show()
+
+🔹 Pie Chart
+sizes = [30, 20, 50]
+labels = ["Apples", "Bananas", "Cherries"]
+plt.pie(sizes, labels=labels, autopct="%1.1f%%")
+plt.title("Pie Chart")
+plt.show()
+
+5️) Customization Options
+🔹 Titles & Labels
+plt.title("My Chart")
+plt.xlabel("X Label")
+plt.ylabel("Y Label")
+
+🔹 Legends
+plt.plot(x, y, label="Line 1")
+plt.legend()
+
+🔹 Grid
+plt.grid(True)
+
+🔹 Figure Size
+plt.figure(figsize=(8,5))
+
+🔹 Multiple Plots (Subplots)
+plt.subplot(1,2,1)  # row=1, col=2, index=1
+plt.plot(x,y)
+plt.subplot(1,2,2)
+plt.bar(categories, values)
+plt.show()
+
+6️) Object-Oriented Interface (Pro Way)
+
+Instead of plt.plot(), you create a figure + axes.
+fig, ax = plt.subplots(figsize=(6,4))
+ax.plot(x, y, color="red")
+ax.set_title("Line Plot")
+ax.set_xlabel("X axis")
+ax.set_ylabel("Y axis")
+plt.show()
+
+7️) Pandas + Matplotlib Shortcut
+
+Pandas DataFrames have .plot() which internally uses Matplotlib.
+import pandas as pd
+df = pd.DataFrame({"A": [1,2,3,4], "B": [10,20,15,30]})
+df.plot(kind="bar")
+plt.show()
+
+8️) Best Practices
+
+Always label axes + title → otherwise graph = meaningless.
+Choose the right chart type:
+Trend → Line
+Compare categories → Bar
+Distribution → Histogram
+Relationship → Scatter
+Outliers → Box
+Proportions → Pie
+
+
+
+Quick Summary
+
+plt.plot() → Line plots
+plt.bar() → Bars
+plt.hist() → Histograms
+plt.scatter() → Scatter plots
+plt.boxplot() → Outliers
+plt.pie() → Proportions
+plt.subplot() → Multiple plots
+plt.show() → Display final graph
