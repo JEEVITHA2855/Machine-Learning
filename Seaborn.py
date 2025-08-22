@@ -10,7 +10,7 @@ Less code → prettier graphs.
 👉 Import it:
 
 import seaborn as sns
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt 
 
 2️⃣ Themes & Styles
 
