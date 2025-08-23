@@ -98,7 +98,7 @@ plt.title("Tip Distribution")
 Figure size
 plt.figure(figsize=(8,5))
 
-5️⃣ Datasets in Seaborn
+5️ Datasets in Seaborn
 
 Seaborn comes with sample datasets for practice:
 
@@ -106,7 +106,7 @@ import seaborn as sns
 print(sns.get_dataset_names())   # list all
 tips = sns.load_dataset("tips")  # load "tips" dataset
 
-6️⃣ When to Use What?
+6️ When to Use What?
 
 Histogram → Distribution of single variable
 Scatter → Relationship between 2 variables
