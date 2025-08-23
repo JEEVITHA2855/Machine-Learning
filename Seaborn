@@ -1,6 +1,6 @@
 Seaborn – Statistical Data Visualization
 
-1️ What is Seaborn?
+1️) What is Seaborn?
 
 Built on top of Matplotlib.
 Integrated with Pandas.
@@ -12,14 +12,14 @@ Less code → prettier graphs.
 import seaborn as sns
 import matplotlib.pyplot as plt 
 
-2️ Themes & Styles
+2️) Themes & Styles
 
 Seaborn has built-in themes that instantly upgrade your plots.
 
 sns.set_style("whitegrid")   # options: darkgrid, whitegrid, dark, white, ticks
 sns.set_palette("pastel")    # colors: deep, muted, bright, pastel, dark, colorblind
 
-3️ Core Plot Types
+3️) Core Plot Types
  1. Distribution Plots
 
 Hist + KDE (smoothed curve)
@@ -88,7 +88,7 @@ plt.show()
 
 ✔ Visualizes correlations (great in EDA).
 
-4️ Customization
+4️) Customization
 
 Colors
 
@@ -98,7 +98,7 @@ plt.title("Tip Distribution")
 Figure size
 plt.figure(figsize=(8,5))
 
-5️ Datasets in Seaborn
+5️) Datasets in Seaborn
 
 Seaborn comes with sample datasets for practice:
 
@@ -106,7 +106,7 @@ import seaborn as sns
 print(sns.get_dataset_names())   # list all
 tips = sns.load_dataset("tips")  # load "tips" dataset
 
-6️ When to Use What?
+6️) When to Use What?
 
 Histogram → Distribution of single variable
 Scatter → Relationship between 2 variables
